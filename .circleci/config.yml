@@ -58,9 +58,7 @@ jobs:
           command: |
             . venv/bin/activate
             python manage.py test
-      - run:
-          name: Generate code coverage
-          command: './node_modules/.bin/nyc report --reporter=text-lcov'
+            coverage run manage.py test
 
       - store_artifacts:
           path: test-reports
