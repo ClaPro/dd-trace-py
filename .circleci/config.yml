@@ -59,7 +59,7 @@ jobs:
             . venv/bin/activate
             python manage.py test
             coverage run manage.py test
-            coverage html -d $CIRCLE_ARTIFACTS
+            coverage html -d test-reports
 
       - store_artifacts:
           path: test-reports
